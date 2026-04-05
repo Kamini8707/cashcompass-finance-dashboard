@@ -1,161 +1,146 @@
-# 🚀 FinTrack — Finance Dashboard
+# CashCompass – Personal Finance Analytics Dashboard
 
-A modern, production-quality finance dashboard built with React, Vite, Tailwind CSS v3, and Recharts. Track income, expenses, analyze spending patterns, and switch between Admin/Viewer roles.
-
-🔗 **Live Preview:** https://finance-dashboard-ten-rose.vercel.app/  
-📂 **GitHub Repository:** https://github.com/CodewithsushilOfficial/Finance-dashboard  
-
-![FinTrack Dashboard Screenshot](/screenshot.png)
+CashCompass is a modern finance dashboard that helps users manage their income, expenses, savings, and financial insights in one place. The application focuses on clean UI, interactive charts, and role-based access to simulate a real-world financial product dashboard.
 
 ---
 
-## ✨ Key Highlights
+## Project Description
 
-- 📊 Interactive financial dashboard with real-time insights  
-- 🔍 Smart filtering and search for transactions  
-- 🎭 Role-based UI (Admin vs Viewer)  
-- 🌙 Dark/Light mode with persistence  
-- 📤 Export transactions as CSV  
-- ⚡ Smooth animations and responsive design  
+CashCompass is designed as a personal finance management dashboard where users can track financial transactions and analyze their spending behavior using visual analytics. The system includes an Admin role for managing transactions and a Viewer role for read-only access.
+
+The dashboard converts raw transaction data into meaningful insights such as highest spending category, expense ratio, monthly comparison, and spending trends.
 
 ---
 
-## 🧠 My Approach
+## Features
 
-While building this project, I focused on creating a **clean, intuitive, and scalable dashboard UI**.
+### Overview Dashboard
 
-- Designed a minimal UI to improve readability and user experience  
-- Used Zustand for simple and efficient global state management  
-- Implemented role-based UI to simulate real-world product behavior  
-- Integrated charts to convert raw financial data into meaningful insights  
-- Structured components for scalability and reusability  
+* Total Balance, Income, Expenses, Savings
+* Budget usage and remaining budget
+* Recent Activity section
+* Expense Insights chart
+* Balance Trend chart
+
+### Records Management
+
+* Add new transaction
+* Edit transaction
+* Delete transaction
+* Search transactions
+* Filter by type, category, and date
+* Running balance calculation
+
+### Analytics Dashboard
+
+* Highest Spending Category
+* Expense Ratio
+* Monthly Income vs Expense comparison
+* Expense Pattern Radar Chart
+* Daily Spending Trend
+* Income Source Distribution
+* Expense Analysis Scatter Chart
+
+### Role-Based Access Control
+
+| Feature            | Admin | Viewer |
+| ------------------ | ----- | ------ |
+| View Overview      | Yes   | Yes    |
+| View Records       | Yes   | Yes    |
+| View Analytics     | Yes   | Yes    |
+| Add Transaction    | Yes   | No     |
+| Edit Transaction   | Yes   | No     |
+| Delete Transaction | Yes   | No     |
+
+### Additional Functionalities
+
+* Dark and Light mode
+* Currency switch (INR / USD)
+* Export transactions to CSV
+* Responsive design (Mobile, Tablet, Desktop)
+* Animated counters and charts
+* Local storage data persistence
 
 ---
 
-## ✨ Features
+## Tech Stack
 
-- **Dashboard Overview** — Summary cards (Balance, Income, Expenses, Savings Rate) with trend indicators  
-- **Balance Trend Chart** — 6-month area chart showing income, expenses, and net balance  
-- **Spending Breakdown** — Donut chart of top 5 expense categories  
-- **Transaction Management** — Full CRUD (create, read, update, delete) for transactions  
-- **Advanced Filtering** — Search, type, category, and date range filters  
-- **Financial Insights** — Top spending category, biggest expense, average daily spend, savings streak, and monthly comparison chart  
-- **Role-Based Access (RBAC)** — Admin (full access) and Viewer (read-only) modes  
-- **Dark/Light Theme** — Toggle with localStorage persistence  
-- **Currency Toggle** — Switch between INR and USD formatting  
-- **CSV Export** — Download filtered transactions as CSV  
-- **Toast Notifications** — Animated success/error/warning toasts  
-- **Page Transitions** — Smooth Framer Motion animations between pages  
-- **Loading Skeleton** — Shimmer loading state on initial load  
-- **Responsive Design** — Mobile bottom tabs, tablet icon sidebar, desktop full sidebar  
+* React.js
+* Vite
+* Tailwind CSS
+* Recharts
+* Zustand (State Management)
+* React Router
+* Framer Motion
+* date-fns
+* Lucide Icons
 
 ---
 
-## 🛠 Tech Stack
+## Folder Structure
 
-| Technology | Purpose |
-|------------|---------|
-| React 18 | UI framework (JavaScript, hooks-only) |
-| Vite | Build tool and dev server |
-| Tailwind CSS v3 | Utility-first styling |
-| Recharts | Charts and data visualization |
-| Zustand | Lightweight state management |
-| React Router v6 | Client-side routing |
-| Lucide React | Modern icon library |
-| date-fns | Date formatting and manipulation |
-| Framer Motion | Page transition animations |
+src/
+
+* components/
+
+  * dashboard/
+  * transactions/
+  * insights/
+  * layout/
+  * ui/
+* pages/
+* store/
+* data/
+* utils/
+* App.jsx
+* main.jsx
 
 ---
 
-## ⚙️ Setup Instructions
+## Installation and Run
 
-```bash
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
 
-📁 Folder Structure
-src/
-├── components/
-│   ├── layout/          # Sidebar, Header, Layout wrapper
-│   ├── dashboard/       # SummaryCards, BalanceTrendChart, SpendingBreakdownChart
-│   ├── transactions/    # TransactionList, TransactionRow, Filters, Modal
-│   ├── insights/        # InsightsPanel with analytics cards
-│   └── ui/              # Badge, Card, RoleSwitcher, Toast
-├── store/               # Zustand store with persist middleware
-├── data/                # Mock transaction data
-├── pages/               # Dashboard, Transactions, Insights pages
-├── App.jsx              # Root component with routing
-└── main.jsx             # Entry point
+---
 
-🔐 RBAC (Role-Based Access Control)
-Feature	Admin	Viewer
-View Dashboard	✅	✅
-View Transactions	✅	✅
-View Insights	✅	✅
-Add Transaction	✅	❌
-Edit Transaction	✅	❌
-Delete Transaction	✅	❌
+## Assumptions
 
-The role is persisted in localStorage and can be switched via the sidebar dropdown.
-
-🧠 State Management
-
-Zustand manages global state with persistence:
-
-Transactions — Full CRUD with mock data initialization
-Filters — Search, type, category, date range
-Role — Admin/Viewer toggle
-Theme — Dark/Light mode
-Currency — INR/USD toggle
-
-All persistent state is stored in localStorage under the key fintrack-storage.
-
-🎨 Design System
-Fonts: DM Sans (body), Space Grotesk (headings/numbers)
-Colors: Dark-first with indigo-purple accent (#6C63FF)
-Animations: Fade-in, slide-up, shimmer skeleton
-UI Style: Clean, minimal, and responsive
-🔮 Future Improvements
-Backend API integration (REST or GraphQL)
-Authentication with JWT
-Budget tracking and alerts
-Recurring transactions
-Data import from bank statements
-Multi-currency with live exchange rates
-PWA support for offline access
-AI-based spending insights
-Team/shared dashboards
-Mobile app (React Native)
-🙌 Final Note
-
-This project was built as part of a frontend assignment to demonstrate:
-
-Clean UI/UX design
-Scalable React architecture
-State management using Zustand
-Real-world features like RBAC and data visualization
-
-I’d love to hear your feedback! 🚀
-
+* The application is designed for personal finance tracking.
+* Admin can manage transactions, Viewer can only view data.
+* Data is stored in local storage instead of a backend database.
+* Charts are used to visualize financial patterns and insights.
+* The focus of the project is frontend architecture, UI/UX, and analytics.
 
 ---
 
-# 🔥 Final Suggestion (Very Important)
+## Future Improvements
 
-Before submitting:
-
-👉 Add **real screenshots (not placeholder)**  
-👉 Double-check mobile responsiveness  
-👉 Test all features (filters, CSV, role switch)
+* Backend integration
+* User authentication
+* Budget alerts and notifications
+* Recurring transactions
+* Multi-user support
+* AI-based spending insights
+* Mobile application version
 
 ---
 
-If you want, I can:
-- Review your live site UI  
-- Suggest final polish (like interviewer feedback)  
-- Help you write submission message  
+## Author
 
-Just tell me 👍
+- Kamini Prajapati
+- B.Tech IT
+- Frontend Developer (React)
+
+---
+
+## Purpose of the Project
+
+This project was built as part of a Frontend Engineering assessment to demonstrate:
+
+* Component-based architecture
+* State management
+* Data visualization
+* Role-based UI
+* Responsive design
+* Clean and modern UI/UX
