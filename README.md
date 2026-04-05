@@ -128,9 +128,9 @@ npm run dev
 
 ## Author
 
-Kamini Prajapati
-B.Tech IT
-Frontend Developer (React)
+- Kamini Prajapati
+- B.Tech IT
+- Frontend Developer (React)
 
 ---
 
