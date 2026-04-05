@@ -1,10 +1,10 @@
-# CashCompass – Personal Finance Analytics Dashboard
+# 💰 CashCompass – Personal Finance Analytics Dashboard
 
 CashCompass is a modern finance dashboard that helps users manage their income, expenses, savings, and financial insights in one place. The application focuses on clean UI, interactive charts, and role-based access to simulate a real-world financial product dashboard.
 
 ---
 
-## Project Description
+## 📌 Project Description
 
 CashCompass is designed as a personal finance management dashboard where users can track financial transactions and analyze their spending behavior using visual analytics. The system includes an Admin role for managing transactions and a Viewer role for read-only access.
 
@@ -12,7 +12,30 @@ The dashboard converts raw transaction data into meaningful insights such as hig
 
 ---
 
-## Features
+## 📸 Screenshots
+
+### Overview
+![Overview](./screenshots/overview.png)
+
+### Dashboard
+![Dashboard](./screenshots/dashboard.png)
+
+### Transactions
+![Transactions](./screenshots/transactions.png)
+
+### Analytics
+![Analytics](./screenshots/analytics.png)
+
+### Role Modes
+![Modes](./screenshots/modes.png)
+
+### Edit Transaction
+![Edit](./screenshots/Edit.png)
+
+### Mobile View
+![Mobile](./screenshots/mobile_view.png)
+
+## 🚀 Features
 
 ### Overview Dashboard
 
@@ -63,7 +86,7 @@ The dashboard converts raw transaction data into meaningful insights such as hig
 
 ---
 
-## Tech Stack
+## 🛠 Tech Stack
 
 * React.js
 * Vite
@@ -77,7 +100,7 @@ The dashboard converts raw transaction data into meaningful insights such as hig
 
 ---
 
-## Folder Structure
+## 📂 Folder Structure
 
 src/
 
@@ -114,7 +137,7 @@ npm run dev
 
 ---
 
-## Future Improvements
+##  Future Improvements
 
 * Backend integration
 * User authentication
@@ -126,7 +149,7 @@ npm run dev
 
 ---
 
-## Author
+##  Author
 
 - Kamini Prajapati
 - B.Tech IT
